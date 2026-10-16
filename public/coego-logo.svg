@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#050B14"/>
+      <stop offset="100%" stopColor="#000000"/>
+    </linearGradient>
+    <linearGradient id="coegoBlueGrad" x1="50" y1="50" x2="350" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#00C8FF"/>
+      <stop offset="50%" stopColor="#0080FF"/>
+      <stop offset="100%" stopColor="#0047BA"/>
+    </linearGradient>
+    <linearGradient id="coegoFoldGrad" x1="80" y1="80" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#0050B3"/>
+      <stop offset="100%" stopColor="#00C8FF"/>
+    </linearGradient>
+    <linearGradient id="coegoBarGrad" x1="180" y1="180" x2="300" y2="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#0070F3"/>
+      <stop offset="100%" stopColor="#00D2FF"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" rx="80" fill="url(#bgGrad)"/>
+
+  <!-- Glowing Icon -->
+  <g transform="translate(100, 50) scale(1)">
+    <!-- Outer Arc -->
+    <path d="M165 42 L115 42 C68 42 32 75 32 110 C32 145 68 178 115 178 L168 178 L142 148 L112 148 C82 148 62 130 62 110 C62 90 82 72 112 72 L142 72 L165 42 Z" fill="url(#coegoBlueGrad)" filter="url(#glow)"/>
+    <!-- Fold -->
+    <path d="M115 42 C82 42 52 58 40 85 C48 70 70 58 100 58 L145 58 L165 42 L115 42 Z" fill="url(#coegoFoldGrad)"/>
+    <!-- Central Bar -->
+    <polygon points="90,140 120,95 152,95 122,140" fill="url(#coegoBarGrad)"/>
+  </g>
+
+  <!-- Typography COEGO -->
+  <g transform="translate(200, 310)" text-anchor="middle" font-family="'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif" font-weight="900" font-size="52" letter-spacing="4">
+    <text y="0">
+      <tspan fill="#FFFFFF">CO</tspan>
+      <tspan fill="#0080FF">E</tspan>
+      <tspan fill="#FFFFFF">GO</tspan>
+    </text>
+  </g>
+
+  <!-- Glowing blue underline below E -->
+  <line x1="160" y1="330" x2="240" y2="330" stroke="#0080FF" stroke-width="4" stroke-linecap="round" filter="url(#glow)"/>
+</svg>
